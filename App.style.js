@@ -2,11 +2,14 @@ import {StyleSheet} from "react-native";
 import {vh,vw} from "./StyleHelper";
 
 const style = StyleSheet.create({
-    container: {
+    screen: {
         flex: 1,
         backgroundColor: '#dfdfda',
     },
-    wrapper: {
+    scroller: {
+        flex: 1,
+    },
+    container: {
         flex: 1,
         width: vw(95),
         marginTop: vw(2.5),
@@ -18,7 +21,7 @@ const style = StyleSheet.create({
     },
     overlay: {
         position: 'absolute',
-        bottom: 0,
+        top: 0,
         right: 0,
         width: vw(80),
         backgroundColor: '#e1e7f1',
