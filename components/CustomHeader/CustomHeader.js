@@ -3,12 +3,13 @@ import React from 'react';
 
 import style from './CustomHeader.style';
 import {Header, Button, Icon} from "@rneui/themed";
+import {headerColor} from "../../StyleHelper";
 
 const CustomHeader = (props) => {
 
     return (
         <Header
-            backgroundColor="#df9d61"
+            backgroundColor={headerColor}
             containerStyle={style.container}
             centerComponent={(
                 <Text style={style.text}>{props.title}</Text>

@@ -7,6 +7,8 @@ export const vh = (percent) => {
     return (Dimensions.get('window').height / 100) * percent
 }
 
+export const headerColor = '#df9d61'
+
 export const header = StyleSheet.create({
     h1: {
         fontWeight: "bold",

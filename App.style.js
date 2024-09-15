@@ -19,20 +19,6 @@ const style = StyleSheet.create({
         backgroundColor: '#f2f5f6',
         borderRadius: 15,
     },
-    overlay: {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        width: vw(80),
-        backgroundColor: '#e1e7f1',
-        padding: 15,
-        header: {
-            marginTop: 15,
-            marginBottom: 20,
-            fontSize: 30,
-            textAlign: 'center',
-        }
-    },
 });
 
 export default style;
