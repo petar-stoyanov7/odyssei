@@ -40,3 +40,4 @@ yarn-error.*
 
 #temp dir
 tmp
+assets/data

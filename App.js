@@ -9,6 +9,7 @@ import CustomButton from "./components/CustomButton/CustomButton";
 import ErrorOverlay from "./components/Overlay/ErrorOverlay";
 import NavOverlay from "./components/Overlay/NavOverlay";
 import Main from "./components/Main/Main";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 /** TODO: To whoever ends up in this mess - I also can't believe react native's ability to handle local files is made
  * in such stupid manner. I'm far from pro, but whoever is responsible should be ashamed of itself */
@@ -40,15 +41,25 @@ export default function App() {
     useEffect(() => {
         let tempLinks = [];
         let tempDocs = {};
-        let str = '';
-        fileData.forEach(dayObj => {
+        fileData.forEach((dayObj, i) => {
             tempLinks.push(dayObj.linkTitle);
             tempDocs[dayObj.linkTitle] = dayObj
         });
+
         setLinks(tempLinks);
         setDocuments(tempDocs);
-        setActiveDocument(tempDocs[0])
+        setActiveDocument(tempDocs[tempLinks[0]]);
+
+
     }, []);
+
+    /* an ugly workaround to set the stored page after the document has been loaded
+    * TODO: finally learn async/await */
+    useEffect(() => {
+        AsyncStorage.getItem('active-document').then((title) => {
+            setActiveDocument(documents[title]);
+        })
+    }, [documents]);
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -57,6 +68,7 @@ export default function App() {
     const changeActiveDocument = (title) => {
         setShowMenu(false);
         setActiveDocument(documents[title]);
+        setStorageItem('active-document', title);
     }
 
     const showWarningOverlay = (title, message) => {
@@ -65,6 +77,10 @@ export default function App() {
             'message': message
         });
         setShowWarning(true);
+    }
+
+    const setStorageItem = async (key, value) => {
+        await AsyncStorage.setItem(key, value)
     }
 
     return (

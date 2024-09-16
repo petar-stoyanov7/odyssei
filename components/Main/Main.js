@@ -31,6 +31,7 @@ const Main = (props) => {
             case "link":
                 return (
                     <Button
+                        key={index}
                         type="solid"
                         size="md"
                         title={item.title}
@@ -43,11 +44,11 @@ const Main = (props) => {
                 );
             case "header":
                 return (
-                    <Text style={{...header[item.subtype], ...style.title}}>{item.text}</Text>
+                    <Text key={index} style={{...header[item.subtype], ...style.title}}>{item.text}</Text>
                 );
             case "text":
                 return (
-                    <Text style={txt.default}>{item.text}</Text>
+                    <Text key={index} style={txt.default}>{item.text}</Text>
                 );
             default:
                 return "";
@@ -64,9 +65,6 @@ const Main = (props) => {
                     {document.description}
                 </Text>
             </View>
-            {/*<View style={style.container}>*/}
-            {/*    <Text>{JSON.stringify(document.content)}</Text>*/}
-            {/*</View>*/}
             {document.content.map((section, i) => {
                 const sectionStyle = section.type === "flex"
                     ? {
