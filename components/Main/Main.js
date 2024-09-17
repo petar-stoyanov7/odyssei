@@ -4,7 +4,6 @@ import {Overlay, Button} from "@rneui/themed";
 import {header, txt} from "../../StyleHelper";
 
 import style from './Main.style';
-import CustomButton from "../CustomButton/CustomButton";
 
 const Main = (props) => {
     if (!props.document || !props.document.content) {
@@ -28,7 +27,7 @@ const Main = (props) => {
 
     const getProperElement = (item, index) => {
         switch (item.type) {
-            case "link":
+            case 'link':
                 return (
                     <Button
                         key={index}
@@ -42,18 +41,18 @@ const Main = (props) => {
                         radius="3"
                     />
                 );
-            case "header":
+            case 'header':
                 return (
                     <Text key={index} style={{...header[item.subtype], ...style.title}}>{item.text}</Text>
                 );
-            case "text":
+            case 'text':
                 return (
                     <Text key={index} style={txt.default}>{item.text}</Text>
                 );
             default:
-                return "";
+                return '';
         }
-    }
+    };
 
     const document = props.document;
 

@@ -1,0 +1,73 @@
+{
+  "title": "First two days",
+  "linkTitle": "First two",
+  "description": "The travel from Plovdiv to Igoumenitsa and the large trip from Bari to Florence",
+  "content": [
+    {
+      "title": "Trips",
+      "type": "flex",
+      "items": [
+        {
+          "title": "Igoumenitsa (w)",
+          "url": "https://ul.waze.com/ul?place=ChIJr8b1PRZ-WxMR5oVysHEPlpo&ll=39.48926680%2C20.25835020&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Capua (W)",
+          "url": "https://ul.waze.com/ul?place=ChIJ3xmUMi7_OhMRiNJVIGjNhFM&ll=41.08226960%2C14.25517000&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Florence (W)",
+          "url": "https://ul.waze.com/ul?place=ChIJTSsUGyhUKhMRe-yPyZY2eD4&ll=43.79687250%2C11.25278880&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Whole (GM)",
+          "url": "https://www.google.com/maps/dir/Bari,+Metropolitan+City+of+Bari,+Italy/Via+Filippo+Turati,+6,+81055+Santa+Maria+Capua+Vetere+CE,+Italy/Via+dei+Cappuccini,+12,+50134+Firenze+FI,+Italy/@41.3074497,13.942308,9z/data=!4m20!4m19!1m5!1m1!1s0x1347e8f8f3078d6f:0x87254066a3908e1!2m2!1d16.8718715!2d41.1171432!1m5!1m1!1s0x133aff11a7260a53:0x800cdb84082ff8d9!2m2!1d14.2551691!2d41.0822223!1m5!1m1!1s0x132a54281b142b4d:0x3e783696c98fec7b!2m2!1d11.2527888!2d43.7968725!3e0?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ]
+    },
+    {
+      "title": "Ferry",
+      "items": [
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Reservation# [702780397]"
+        },
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Access Code [993698]"
+        },
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Igoumenitsa - Bari"
+        },
+        {
+          "type": "header",
+          "subtype": "h4",
+          "text": "Ship: [Ariadne]"
+        },
+        {
+          "type": "text",
+          "text": "Tue, 01 October 2024 - [23:59]"
+        }
+      ]
+    },
+    {
+      "title": "A PDF",
+      "items": [
+        {
+          "type": "link",
+          "url": "file:assets/data/day1/file1.pdf",
+          "title": "PDF File",
+          "size": "medium",
+          "color": "orange"
+        }
+      ]
+    }
+  ]
+}
