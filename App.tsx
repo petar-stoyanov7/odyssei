@@ -3,21 +3,16 @@ import Pdf from 'react-native-pdf';
 import {
   SafeAreaView,
   ScrollView,
-  StyleSheet,
   Text,
-  useColorScheme,
-  View,
-  Dimensions
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import style from './App.style';
-import {header, txt} from './StyleHelper';
-import CustomHeader from "./components/CustomHeader/CustomHeader";
-import ErrorOverlay from './components/Overlay/ErrorOverlay';
-import NavOverlay from "./components/Overlay/NavOverlay";
-import Main from "./components/Main/Main";
+import CustomHeader from './components/CustomHeader/CustomHeader';
+import ErrorOverlay from './/components/Overlay/ErrorOverlay';
+import NavOverlay from './components/Overlay/NavOverlay';
+import Main from './components/Main/Main';
 
 const fileData = [
   require('./assets/data/day0.json'),
@@ -34,7 +29,7 @@ function App(): React.JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [activeDocument, setActiveDocument] = useState({});
-  const [debug, setDebug] = useState("");
+  const [debug, setDebug] = useState('');
 
   const [showWarning, setShowWarning] = useState(false);
   const [warning, setWarning] = useState({
@@ -82,18 +77,8 @@ function App(): React.JSX.Element {
   };
 
   const setStorageItem = async (key, value) => {
-    await AsyncStorage.setItem(key, value)
+    await AsyncStorage.setItem(key, value);
   };
-
-  const fileSource = {uri:'bundle-assets://file1.pdf'};
-
-  const example = (
-      <ScrollView
-          contentInsetAdjustmentBehavior="automatic">
-        <Text>HERE</Text>
-        <Pdf source={fileSource}/>
-      </ScrollView>
-  );
 
   return (
       <SafeAreaView style={style.screen}>

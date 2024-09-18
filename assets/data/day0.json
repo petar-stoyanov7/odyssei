@@ -8,6 +8,7 @@
       "type": "flex",
       "items": [
         {
+          "type": "link",
           "title": "Igoumenitsa (w)",
           "url": "https://ul.waze.com/ul?place=ChIJr8b1PRZ-WxMR5oVysHEPlpo&ll=39.48926680%2C20.25835020&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
         },
@@ -61,9 +62,9 @@
       "title": "A PDF",
       "items": [
         {
-          "type": "link",
-          "url": "file:assets/data/day1/file1.pdf",
-          "title": "PDF File",
+          "type": "pdf",
+          "url": "day1/file1.pdf",
+          "title": "File1",
           "size": "medium",
           "color": "orange"
         }

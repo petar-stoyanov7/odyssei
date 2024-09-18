@@ -1,9 +1,9 @@
-import {Image, Pressable, Text, View} from "react-native";
+import {Image, Pressable, Text, View} from 'react-native';
 import React from 'react';
 
 import style from './CustomHeader.style';
-import {Header, Button, Icon} from "@rneui/themed";
-import {headerColor} from "../../StyleHelper";
+import {Header, Button, Icon} from '@rneui/themed';
+import {headerColor} from '../../StyleHelper';
 
 const CustomHeader = (props) => {
 
@@ -27,7 +27,7 @@ const CustomHeader = (props) => {
             rightComponentStyle={style.header}
         />
     );
-}
+};
 
 export default CustomHeader;
 

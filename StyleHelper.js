@@ -1,13 +1,14 @@
 import {Dimensions, StyleSheet} from "react-native";
 
 export const vw = (percent) => {
-    return (Dimensions.get('window').width / 100) * percent
-}
-export const vh = (percent) => {
-    return (Dimensions.get('window').height / 100) * percent
-}
+    return (Dimensions.get('window').width / 100) * percent;
+};
 
-export const headerColor = '#df9d61'
+export const vh = (percent) => {
+    return (Dimensions.get('window').height / 100) * percent;
+};
+
+export const headerColor = '#df9d61';
 
 export const header = StyleSheet.create({
     h1: {
@@ -45,11 +46,11 @@ export const header = StyleSheet.create({
         fontSize: 12,
         marginTop: 12,
         marginBottom: 20
-    }
+    },
 });
 
 export const txt = StyleSheet.create({
     default: {
-        fontSize: 22
-    }
+        fontSize: 22,
+    },
 });
