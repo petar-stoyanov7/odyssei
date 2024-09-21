@@ -26,6 +26,7 @@ const style = StyleSheet.create({
     pdf: {
         flex: 1,
         flexGrow: 1,
+        backgroundColor: '#fff',
         // width: '100%',
         width: vw(92),
         height: vh(100),

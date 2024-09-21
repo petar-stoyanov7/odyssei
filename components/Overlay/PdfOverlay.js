@@ -1,6 +1,7 @@
 import React from 'react';
 import {Overlay, Button} from '@rneui/themed';
 import Pdf from 'react-native-pdf';
+import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
 import style from './PdfOverlay.style';
 import {ScrollView, Text, View} from 'react-native';
@@ -25,12 +26,18 @@ const PdfOverlay = (props) => {
                     onPress={props.onHide}
                 />
             </View>
-            <ScrollView style={style.pdfContainer}>
+            <ReactNativeZoomableView
+                style={style.header}
+                maxZoom={10}
+                minZoom={0.5}
+                zoomStep={0.5}
+                initialZoom={1}
+            >
                 <Pdf
                     style={style.pdf}
                     source={pdfSource}
                 />
-            </ScrollView>
+            </ReactNativeZoomableView>
         </Overlay>
     );
 };
