@@ -1,6 +1,53 @@
 {
-  "title": "Florence 2",
+  "title": "4.10., Friday, Florence",
   "linkTitle": "Florence 2",
-  "description": "",
-  "content": []
+  "description": {
+    "type": "flex-table",
+    "items": [
+      {"left": "7:00  Breakfast + prep", "right": "[2h]"},
+      {"left": "9:00  Uffizi", "right": "[2h]"},
+      {"left": "11:00 Ponte Vecchio", "right": "[??]"},
+      {"left": "11:20 Bardina tickets", "right": "[0.5h]"},
+      {"left": "12:00 -- lunch --", "right": "[1h]"},
+      {"left": "13:00 Palazzo Pitti", "right": "[2h]"},
+      {"left": "15:00 Gradina Boboli", "right": "[2h]"},
+      {"left": "-- free time --", "right": "[??]"}
+    ]
+  },
+  "content": [
+    {
+      "title": "Trips",
+      "type": "flex",
+      "items": [
+        {
+          "type": "link",
+          "title": "From Hotel",
+          "url": "https://www.google.com/maps/dir/Via+dei+Cappuccini,+12,+50134+Firenze+FI,+Italy/Galleria+degli+Uffizi/@43.7819403,11.232791,14z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x132a54281b142b4d:0x3e783696c98fec7b!2m2!1d11.2527888!2d43.7968725!1m5!1m1!1s0x132a54008dc59081:0xcddeb7c89bf0c4cd!2m2!1d11.2553108!2d43.7677856!3e3?entry=ttu"
+        },
+        {
+          "type": "link",
+          "title": "Daily",
+          "url": "https://www.google.com/maps/dir/Galleria+degli+Uffizi/Ponte+Vecchio,+50125+Firenze+FI,+Italy/43.7639904,11.2561772/Palazzo+Pitti/@43.7660836,11.2488957,16z/data=!3m1!4b1!4m21!4m20!1m5!1m1!1s0x132a54008dc59081:0xcddeb7c89bf0c4cd!2m2!1d11.2553108!2d43.7677856!1m5!1m1!1s0x132a56aaa2dcb667:0x40310ae830e702e8!2m2!1d11.2531435!2d43.767925!1m0!1m5!1m1!1s0x132a515441db99f1:0x5cd0cce4e6f1502a!2m2!1d11.2500081!2d43.7651533!3e2?entry=ttu"
+        },
+        {
+          "type": "link",
+          "title": "To Hotel",
+          "url": "https://www.google.com/maps/place/Via+dei+Cappuccini,+12,+50134+Firenze+FI,+Italy/@43.7968725,11.2502139,17z/data=!3m1!4b1!4m6!3m5!1s0x132a54281b142b4d:0x3e783696c98fec7b!8m2!3d43.7968725!4d11.2527888!16s%2Fg%2F11cphzv326?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+        }
+      ]
+    },
+    {
+      "title": "Tickets",
+      "type": "flex",
+      "items": [
+        {
+          "type": "pdf",
+          "url": "day1/file1.pdf",
+          "title": "File1",
+          "size": "medium",
+          "color": "orange"
+        }
+      ]
+    }
+  ]
 }

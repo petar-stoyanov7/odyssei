@@ -15,6 +15,33 @@ const Main = (props) => {
         return;
     }
 
+    const parseText = (text, index) => {
+        if (typeof text === "string") {
+            return (
+                <Text key={index} style={txt.default}>{text}</Text>
+            );
+        } else if (typeof text === "object") {
+            return (
+                <View style={style.flexTable}>
+                    {text.items.map((item, i) => {
+                        if (text.type === 'flex-table') {
+                            return (
+                                <View style={style.flexTable.container} key={i}>
+                                    <Text style={txt.default}>{item.left}</Text>
+                                    <Text style={txt.default}>{item.right}</Text>
+                                </View>
+                            );
+                        } else {
+                            return (
+                                <Text style={txt.default}>{item}</Text>
+                            );
+                        }
+                    })}
+                </View>
+            )
+        }
+    };
+
     const hidePdfOverlay = () => {
         setShowOverlay(false);
         setPdfSource('');
@@ -98,20 +125,15 @@ const Main = (props) => {
                     onHide={hidePdfOverlay}
                 />
                 <Text style={header.h2}>{document.title}</Text>
-                <Text style={txt.default}>
-                    {document.description}
-                </Text>
+                {parseText(document.description)}
             </View>
             {document.content.map((section, i) => {
                 const sectionStyle = section.type === "flex"
-                    ? {
-                        ...style.container,
-                        ...style.flexContainer
-                    }
+                    ? [style.container, style.flexContainer]
                     : style.container;
                 return (
                     <View style={sectionStyle} key={i}>
-                        <Text style={{...header.h3, ...style.title}}>{section.title}</Text>
+                        <Text style={[header.h3,style.title]}>{section.title}</Text>
                         {section.items.map((item, j) => {
                             return getProperElement(item, j);
                         })}

@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Pdf from 'react-native-pdf';
 import {
   SafeAreaView,
-  ScrollView,
-  Text,
 } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -21,7 +19,7 @@ const fileData = [
   require('./assets/data/day3.json'),
   require('./assets/data/day4.json'),
   require('./assets/data/day5.json'),
-  require('./assets/data/day6.json')
+  require('./assets/data/day6.json'),
 ];
 
 function App(): React.JSX.Element {
@@ -29,7 +27,6 @@ function App(): React.JSX.Element {
   const [showMenu, setShowMenu] = useState(false);
   const [documents, setDocuments] = useState([]);
   const [activeDocument, setActiveDocument] = useState({});
-  const [debug, setDebug] = useState('');
 
   const [showWarning, setShowWarning] = useState(false);
   const [warning, setWarning] = useState({
@@ -37,12 +34,15 @@ function App(): React.JSX.Element {
     'message': ''
   });
 
+  /** TODO: for the time being - I will rely on hardcoded files. In future have a look at
+   *    @dr.pogodin/react-native-fs
+   */
   useEffect(() => {
     let tempLinks = [];
     let tempDocs = {};
     fileData.forEach((dayObj, i) => {
       tempLinks.push(dayObj.linkTitle);
-      tempDocs[dayObj.linkTitle] = dayObj
+      tempDocs[dayObj.linkTitle] = dayObj;
     });
 
     setLinks(tempLinks);

@@ -1,6 +1,73 @@
 {
-  "title": "Florence 1",
+  "title": "3.10., Thursday, Florence",
   "linkTitle": "Florence 1",
-  "description": "",
-  "content": []
+  "description": {
+    "type": "flex-table",
+    "items": [
+      {
+        "left": "7:00  Breakfast + prep",
+        "right": "[2h]"
+      },
+      {
+        "left": "9:00  Santa Maria del Fiore",
+        "right": "[3h]"
+      },
+      {
+        "left": "12:00 -- Lunch --",
+        "right": "[1h]"
+      },
+      {
+        "left": "13:00 Riccardi Medici Palace",
+        "right": "[3h]"
+      },
+      {
+        "left":  "16:00 Cappelle Medicee",
+        "right": "[1h]"
+      },
+      {
+        "left":  "17:00 Santa Maria Novella",
+        "right": "[??]"
+      },
+      {
+        "left":  "--- free time ---",
+        "right": "[??]"
+      }
+    ]
+  },
+  "content": [
+    {
+      "title": "Trips",
+      "type": "flex",
+      "items": [
+        {
+          "type": "link",
+          "title": "From Hotel",
+          "url": "https://www.google.com/maps/dir/Via+dei+Cappuccini,+12,+50134+Firenze+FI,+Italy/Cathedral+of+Santa+Maria+del+Fiore,+Piazza+del+Duomo,+50122+Firenze+FI,+Italy/@43.7851199,11.2414266,15z/data=!3m2!4b1!5s0x132a5402f5027d43:0xf2eabea27289991a!4m14!4m13!1m5!1m1!1s0x132a54281b142b4d:0x3e783696c98fec7b!2m2!1d11.2527888!2d43.7968725!1m5!1m1!1s0x132a5403bfe22ff5:0x5591438487aaf1f5!2m2!1d11.2559602!2d43.773145!3e3?entry=ttu"
+        },
+        {
+          "type": "link",
+          "title": "Daily",
+          "url": "https://www.google.com/maps/dir/Cathedral+of+Santa+Maria+del+Fiore,+Piazza+del+Duomo,+50122+Firenze+FI,+Italy/Palazzo+Medici+Riccardi/Cappelle+Medicee/Basilica+di+Santa+Maria+Novella/@43.7740095,11.2510689,18z/data=!3m1!5s0x132a5402f5027d43:0xf2eabea27289991a!4m26!4m25!1m5!1m1!1s0x132a5403bfe22ff5:0x5591438487aaf1f5!2m2!1d11.2559602!2d43.773145!1m5!1m1!1s0x132a54031be7011b:0x8fcb8659c80d7240!2m2!1d11.2558695!2d43.775165!1m5!1m1!1s0x132a540287d5f98f:0x728e1282dcf87170!2m2!1d11.2533903!2d43.7750913!1m5!1m1!1s0x132a56a975219361:0x85e5747949866eb2!2m2!1d11.2493859!2d43.7746346!3e2?entry=ttu"
+        },
+        {
+          "type": "link",
+          "title": "To Hotel",
+          "url": "https://www.google.com/maps/place/Via+dei+Cappuccini,+12,+50134+Firenze+FI,+Italy/@43.7968725,11.2502139,17z/data=!3m1!4b1!4m6!3m5!1s0x132a54281b142b4d:0x3e783696c98fec7b!8m2!3d43.7968725!4d11.2527888!16s%2Fg%2F11cphzv326?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+        }
+      ]
+    },
+    {
+      "title": "Tickets",
+      "type": "flex",
+      "items": [
+        {
+          "type": "pdf",
+          "url": "day1/file1.pdf",
+          "title": "File1",
+          "size": "medium",
+          "color": "orange"
+        }
+      ]
+    }
+  ]
 }
