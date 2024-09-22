@@ -1,5 +1,5 @@
 {
-  "title": "3.10., Thursday, Florence",
+  "title": "03.10. [Thursday] - Florence",
   "linkTitle": "Florence 1",
   "description": {
     "type": "flex-table",
@@ -62,10 +62,59 @@
       "items": [
         {
           "type": "pdf",
-          "url": "day1/file1.pdf",
-          "title": "File1",
+          "url": "03.10/PalazzoMedici.pdf",
+          "title": "Palazzo Medici",
           "size": "medium",
           "color": "orange"
+        },
+        {
+          "type": "pdf",
+          "url": "03.10/CappelleMedicee.pdf",
+          "title": "Capelle Medicee",
+          "size": "medium",
+          "color": "orange"
+        },
+        {
+          "type": "pdf",
+          "url": "03.10/SantaMariaDelFiore_1030-1115_01.pdf",
+          "title": "Santa Maria 1",
+          "size": "medium",
+          "color": "orange"
+        },
+        {
+          "type": "pdf",
+          "url": "03.10/SantaMariaDelFiore_1030-1115_02.pdf",
+          "title": "Santa Maria 2",
+          "size": "medium",
+          "color": "orange"
+        }
+      ]
+    },
+    {
+      "title": "Villa Ape Rosa Relais",
+      "items": [
+        {
+          "type": "text",
+          "text": "Via Dei Cappuccini 12 Careggi - Rifredi 50134 Florence Italy"
+        },
+        {
+          "type": "text",
+          "text": "+39 328 444 6333"
+        },
+        {
+          "type": "text",
+          "title": ""
+        },
+        {
+          "type": "link",
+          "title": "Call Hotel",
+          "size": "medium",
+          "url": "tel:+393284446333"
+        },
+        {
+          "type": "link",
+          "title": "Open Door",
+          "url": "https://guest.vikey.it/reservations/KNIX5Z9D"
         }
       ]
     }

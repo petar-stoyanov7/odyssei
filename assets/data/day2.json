@@ -1,5 +1,5 @@
 {
-  "title": "4.10., Friday, Florence",
+  "title": "4.10. [Friday] Florence",
   "linkTitle": "Florence 2",
   "description": {
     "type": "flex-table",
@@ -42,10 +42,46 @@
       "items": [
         {
           "type": "pdf",
-          "url": "day1/file1.pdf",
-          "title": "File1",
+          "url": "04.10/UffiziPittiBobboli.pdf",
+          "title": "Uffizi, Pitti, Boboli",
           "size": "medium",
           "color": "orange"
+        }
+      ]
+    },
+    {
+      "title": "Villa Ape Rosa Relais",
+      "items": [
+        {
+          "type": "text",
+          "text": "Via Dei Cappuccini 12 Careggi - Rifredi 50134 Florence Italy"
+        },
+        {
+          "type": "text",
+          "text": "+39 328 444 6333"
+        },
+        {
+          "type": "text",
+          "text": "conf#: 4787555261"
+        },
+        {
+          "type": "text",
+          "text": "pin: 4014"
+        },
+        {
+          "type": "text",
+          "title": ""
+        },
+        {
+          "type": "link",
+          "title": "Call Hotel",
+          "size": "medium",
+          "url": "tel:+393284446333"
+        },
+        {
+          "type": "link",
+          "title": "Open Door",
+          "url": "https://guest.vikey.it/reservations/KNIX5Z9D"
         }
       ]
     }

@@ -1,6 +1,57 @@
 {
   "title": "Farewell",
   "linkTitle": "Farewell",
-  "description": "",
-  "content": []
+  "description": "The last day - trip from Trasimento to Bari and from Igoumenitsa to Plovdiv",
+  "content": [
+    {
+      "title": "Trips",
+      "type": "flex",
+      "items": [
+        {
+          "type": "link",
+          "title": "2+1 Capua",
+          "url": "https://ul.waze.com/ul?place=ChIJ5WWBIv5UOhMRZ8O73hg8MHQ&ll=41.06014250%2C14.33320810&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Terminal Crociere - Bari",
+          "url": "https://ul.waze.com/ul?preview_venue_id=11075995.110563346.5039304&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Plovdiv",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "title": "Ferry",
+      "items": [
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Reservation# [702780397]"
+        },
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Access Code [993698]"
+        },
+        {
+          "type": "header",
+          "subtype": "h3",
+          "text": "Bari - Igoumenitsa"
+        },
+        {
+          "type": "header",
+          "subtype": "h4",
+          "text": "Ship: [Ariadne]"
+        },
+        {
+          "type": "text",
+          "text": "Wed, 03. October 2024 - 19:30"
+        }
+      ]
+    }
+  ]
 }

@@ -1,6 +1,90 @@
 {
-  "title": "Pisa",
+  "title": "06.10 [Sunday] Pisa",
   "linkTitle": "Pisa",
-  "description": "",
-  "content": []
+  "description": {
+    "type": "flex-table",
+    "items": [
+      {"left": "7:00  Breakfast","right": "[1h]"},
+      {"left": "8:00  Travel to Pisa","right": "[1.1h]"},
+      {"left": "9:10  Start from Parking","right": "[50m]"},
+      {"left": "10:00 Piazza dei Miracoli","right": "[3h]"},
+      {"left": "13:00 -- lunch :'( --","right": "[1h]"},
+      {"left": "14:00 Botanical and Museum","right": "[1.5h]"},
+      {"left": "15:30 Piazza dei Cavalieri","right": "[0.5h]"},
+      {"left": "16:00 Borgo Stretto","right": "[1.5h]"},
+      {"left": "17:30 Piazza Garibaldi","right": "[0.5h]"},
+      {"left": "18:00 Chiesa di Santa Maria...","right": "[0.5h]"},
+      {"left": "18:30 -- dinner --","right": "[1h]"},
+      {"left": "19:30 Travel to Hotel","right": "[??]"}
+    ]
+  },
+  "content": [
+    {
+      "title": "Trips",
+      "type": "flex",
+      "items": [
+        {
+          "type": "link",
+          "title": "Park Paparelli (w)",
+          "url": "https://ul.waze.com/ul?place=ChIJIbJR7LmR1RIRwCMfzrdHics&ll=43.72410770%2C10.41247250&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        },
+        {
+          "type": "link",
+          "title": "Daily Walk",
+          "url": "https://www.google.com/maps/dir/Park+Paparelli,+Via+Alberto+Paparelli,+Pisa,+Province+of+Pisa,+Italy/Porta+Pacis,+56127+Pisa+PI,+Italy/Mura+di+Pisa/Piazza+del+Duomo/Orto+e+Museo+Botanico/Piazza+dei+Cavalieri/Borgo+Stretto,+Pisa+PI,+Italy/Piazza+Garibaldi,+Pisa+PI,+Italy/Chiesa+di+Santa+Maria+della+Spina/Park+Paparelli,+Via+A.+Paparelli,+51,+56127+Pisa+PI,+Italy/@43.7200731,10.397117,16z/data=!3m1!4b1!4m62!4m61!1m5!1m1!1s0x12d591b9ec51b221:0xcb8947b7ce1f23c0!2m2!1d10.4124725!2d43.7241077!1m5!1m1!1s0x12d5910180611fdd:0x2298b8b5d8a6d2c7!2m2!1d10.4088581!2d43.7199243!1m5!1m1!1s0x12d591423ec6e54d:0x3c9aa86b3e29e301!2m2!1d10.3937355!2d43.7243666!1m5!1m1!1s0x12d591a76bad7a8b:0x4be4b52e302e7f98!2m2!1d10.3947238!2d43.7232252!1m5!1m1!1s0x12d591a0f2bdb7e3:0xbd68bcb550728711!2m2!1d10.3966952!2d43.7198332!1m5!1m1!1s0x12d591a180216dd3:0xa5dd4a3c206abc29!2m2!1d10.4000338!2d43.7194164!1m5!1m1!1s0x12d591a26f1ccd39:0xb458333afb24f5e9!2m2!1d10.4022415!2d43.7174351!1m5!1m1!1s0x12d591989c52c88f:0x97cb1d73d1586580!2m2!1d10.4023666!2d43.7164106!1m5!1m1!1s0x12d5919fb1369caf:0x2e82ba5f619d15a2!2m2!1d10.3966925!2d43.7151834!1m5!1m1!1s0x12d591b9ec51b221:0xcb8947b7ce1f23c0!2m2!1d10.4124725!2d43.7241077!3e2?entry=ttu"
+        },
+        {
+          "type": "link",
+          "title": "Villa Maia (w)",
+          "url": "https://ul.waze.com/ul?place=ChIJwUb5N6KL1RIRCV_QpYl-sow&ll=43.65149700%2C10.55426810&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location"
+        }
+      ]
+    },
+    {
+      "title": "Tickets",
+      "type": "flex",
+      "items": [
+        {
+          "type": "pdf",
+          "title": "Piazza dei Miracoli",
+          "url": "06.10/PiazzaDelMiraculi.pdf"
+        },
+        {
+          "type": "pdf",
+          "title": "Mura Pisa",
+          "url": "06.10/MuraPisa.pdf"
+        }
+      ]
+    },
+    {
+      "title": "Villa Maya",
+      "items": [
+        {
+          "type": "text",
+          "text": "Piccina 12, 56021 Cascina, Italy"
+        },
+        {
+          "type": "text",
+          "text": "+39 351 995 3874"
+        },
+        {
+          "type": "text",
+          "text": "conf#: 4334713406"
+        },
+        {
+          "type": "text",
+          "text": "pin: 6488"
+        },
+        {
+          "type": "text",
+          "text": ""
+        },
+        {
+          "type": "link",
+          "title": "Call Hotel",
+          "url": "tel:+393519953874"
+        }
+      ]
+    }
+  ]
 }
