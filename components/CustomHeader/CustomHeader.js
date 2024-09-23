@@ -2,14 +2,22 @@ import {Image, Pressable, Text, View} from 'react-native';
 import React from 'react';
 
 import style from './CustomHeader.style';
-import {Header, Button, Icon} from '@rneui/themed';
-import {headerColor} from '../../StyleHelper';
+import {Header, Button} from 'react-native-elements';
+import {Icon} from 'react-native-elements';
+import {headerClr} from '../../StyleHelper';
 
 const CustomHeader = (props) => {
+    // const icon = <Icon name="compass" type="feather" />;
+    const icon = (
+        <Icon
+            name="sc-telegram"
+            type="evilicon"
+        />
+    );
 
     return (
         <Header
-            backgroundColor={headerColor}
+            backgroundColor={headerClr}
             containerStyle={style.container}
             centerComponent={(
                 <Text style={style.text}>{props.title}</Text>
@@ -20,7 +28,7 @@ const CustomHeader = (props) => {
                     size="md"
                     buttonStyle={style.button}
                     onPress={props.pressAction}
-                    icon={(<Icon name="compass" type="feather" />)}
+                    icon={icon}
                     radius="5"
                 />
             )}

@@ -1,5 +1,5 @@
 import {StyleSheet} from "react-native";
-import {vh,vw} from "../../StyleHelper";
+import {vh,vw, lightGreen} from "../../StyleHelper";
 
 const style = StyleSheet.create({
     header: {
@@ -18,8 +18,8 @@ const style = StyleSheet.create({
     button: {
         width: vh(5),
         height: vh(5),
-        backgroundColor: '#69da5a'
-    }
+        backgroundColor: lightGreen
+    },
 });
 
 export default style;

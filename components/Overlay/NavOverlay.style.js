@@ -1,6 +1,6 @@
 import {StyleSheet} from "react-native";
 import {vh,vw} from "../../StyleHelper";
-import {headerColor} from "../../StyleHelper";
+import {orange} from "../../StyleHelper";
 
 const style = StyleSheet.create({
     overlay: {
@@ -8,7 +8,7 @@ const style = StyleSheet.create({
         top: 0,
         right: 0,
         width: vw(80),
-        backgroundColor: headerColor,
+        backgroundColor: orange,
         padding: 15,
         header: {
             marginTop: 15,

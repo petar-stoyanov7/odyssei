@@ -1,10 +1,19 @@
 import {Linking, ScrollView, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import {Overlay, Button} from "@rneui/themed";
-import {header, txt} from "../../StyleHelper";
+import {Button} from 'react-native-elements';
+import {
+    header,
+    txt,
+    orange,
+    blue,
+    green,
+    black,
+    lightGreen,
+    darkGray,
+} from '../../StyleHelper';
 
 import style from './Main.style';
-import PdfOverlay from "../Overlay/PdfOverlay";
+import PdfOverlay from '../Overlay/PdfOverlay';
 
 const Main = (props) => {
     const [showOverlay, setShowOverlay] = useState(false);
@@ -15,12 +24,30 @@ const Main = (props) => {
         return;
     }
 
+    const processColor = (color) => {
+        switch(color) {
+            case 'black':
+                return black;
+            case 'darkGray':
+                return darkGray;
+            case 'blue':
+                return blue;
+            case 'green':
+                return green;
+            case 'lightGreen':
+                return lightGreen;
+            case 'orange':
+            default:
+                return orange;
+        }
+    };
+
     const parseText = (text, index) => {
-        if (typeof text === "string") {
+        if (typeof text === 'string') {
             return (
                 <Text key={index} style={txt.default}>{text}</Text>
             );
-        } else if (typeof text === "object") {
+        } else if (typeof text === 'object') {
             return (
                 <View style={style.flexTable}>
                     {text.items.map((item, i) => {
@@ -38,7 +65,7 @@ const Main = (props) => {
                         }
                     })}
                 </View>
-            )
+            );
         }
     };
 
@@ -70,17 +97,25 @@ const Main = (props) => {
     };
 
     const getProperElement = (item, index) => {
+        let bgColor = null;
+        if (item.background) {
+            bgColor = processColor(item.background);
+        }
+        console.log('bg', bgColor);
         switch (item.type) {
             case 'link':
+                const linkStyle = bgColor
+                    ? [style.button, {backgroundColor: bgColor}]
+                    : style.button;
                 return (
                     <Button
                         key={index}
                         type="solid"
                         size="md"
                         title={item.title}
-                        buttonStyle={style.button}
+                        buttonStyle={linkStyle}
                         onPress={() => {
-                            accessApp(item.url)
+                            accessApp(item.url);
                         }}
                         radius="3"
                     />
@@ -94,14 +129,17 @@ const Main = (props) => {
                     <Text key={index} style={txt.default}>{item.text}</Text>
                 );
             case 'pdf':
+                const pdfStyle = bgColor
+                    ? [style.button, {backgroundColor: bgColor}]
+                    : style.button;
                 return (
                     <Button
                         key={index}
                         type="solid"
                         size="md"
-                        color="warning"
+                        color="danger"
                         title={item.title}
-                        buttonStyle={style.button}
+                        buttonStyle={pdfStyle}
                         onPress={() => {
                             showPdfOverlay(item.title, item.url);
                         }}
@@ -128,7 +166,7 @@ const Main = (props) => {
                 {parseText(document.description)}
             </View>
             {document.content.map((section, i) => {
-                const sectionStyle = section.type === "flex"
+                const sectionStyle = section.type === 'flex'
                     ? [style.container, style.flexContainer]
                     : style.container;
                 return (
@@ -142,6 +180,6 @@ const Main = (props) => {
             })}
         </ScrollView>
     );
-}
+};
 
 export default Main;
