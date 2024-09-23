@@ -1,5 +1,5 @@
 import {StyleSheet} from "react-native";
-import {vh,vw, lightGreen} from "../../StyleHelper";
+import {vh,vw, lightGreen, white} from "../../StyleHelper";
 
 const style = StyleSheet.create({
     header: {
@@ -11,14 +11,19 @@ const style = StyleSheet.create({
         width: '100%',
         fontSize: 30,
         fontWeight: "bold",
-        color: '#fff',
+        color: white,
         textAlign: "center",
         verticalAlign: "center"
     },
     button: {
         width: vh(5),
         height: vh(5),
-        backgroundColor: lightGreen
+        backgroundColor: lightGreen,
+        borderRadius: 5,
+    },
+    image: {
+        width: '100%',
+        height: '100%',
     },
 });
 

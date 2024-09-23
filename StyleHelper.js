@@ -15,6 +15,7 @@ export const blue = '#6982ff';
 export const lightGreen = '#69da5a';
 export const black = '#252525';
 export const darkGray = '#4e4e4e';
+export const white = '#f1f1f1';
 
 
 export const header = StyleSheet.create({
