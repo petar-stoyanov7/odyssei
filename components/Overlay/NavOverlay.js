@@ -4,7 +4,6 @@ import {Overlay, Button} from "@rneui/themed";
 import {header} from "../../StyleHelper";
 
 import style from './NavOverlay.style';
-import CustomButton from "../CustomButton/CustomButton";
 
 const NavOverlay = (props) => {
     //
