@@ -26,10 +26,12 @@ const style = StyleSheet.create({
     pdf: {
         flex: 1,
         flexGrow: 1,
+        marginTop: '10%',
+        // marginBottom: '10%',
         backgroundColor: '#fff',
         // width: '100%',
         width: vw(92),
-        height: vh(100),
+        height: vh(80),
     },
 });
 

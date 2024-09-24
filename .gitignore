@@ -73,6 +73,8 @@ yarn-error.log
 !.yarn/sdks
 !.yarn/versions
 
+# release copy
+android/app/build.gradle.release
 
 #Data
 android/app/src/main/assets/data/*
