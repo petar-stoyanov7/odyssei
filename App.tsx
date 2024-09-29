@@ -20,6 +20,7 @@ const fileData = [
   require('./assets/data/day4.json'),
   require('./assets/data/day5.json'),
   require('./assets/data/day6.json'),
+  require('./assets/data/others.json'),
 ];
 
 function App(): React.JSX.Element {

@@ -33,6 +33,15 @@ const style = StyleSheet.create({
         width: vw(92),
         height: vh(80),
     },
+    img: {
+        // flex: 1,
+        // flexGrow: 1,
+        backgroundColor: '#fff',
+        width: '100%',
+        height: '100%',
+        // width: vw(92),
+        // height: vh(80),
+    },
 });
 
 export default style;

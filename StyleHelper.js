@@ -13,6 +13,7 @@ export const orange = '#ff811c';
 export const green = '#39a355';
 export const blue = '#6982ff';
 export const lightGreen = '#69da5a';
+export const red = '#ff001e';
 export const black = '#252525';
 export const darkGray = '#4e4e4e';
 export const white = '#f1f1f1';
@@ -66,6 +67,10 @@ export const header = StyleSheet.create({
 export const txt = StyleSheet.create({
     default: {
         fontSize: 22,
-        color: darkGray
+        color: darkGray,
     },
+    list: {
+        fontSize: 20,
+        color: darkGray,
+    }
 });

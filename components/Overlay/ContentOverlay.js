@@ -3,12 +3,37 @@ import {Overlay, Button} from '@rneui/themed';
 import Pdf from 'react-native-pdf';
 import { ReactNativeZoomableView } from '@openspacelabs/react-native-zoomable-view';
 
-import style from './PdfOverlay.style';
-import {ScrollView, Text, View} from 'react-native';
+import style from './ContentOverlay.style';
+import {Text, View, Image} from 'react-native';
 import {header} from '../../StyleHelper';
 
-const PdfOverlay = (props) => {
-    const pdfSource = {uri: `bundle-assets://data/${props.source}`};
+const ContentOverlay = (props) => {
+    if (!props.type) {
+        return;
+    }
+    const source = {uri: `bundle-assets://data/${props.source}`};
+    let overlayContent = '';
+
+    //todo: For some reason image is not working. Find out why.
+
+    switch (props.type) {
+        case 'pdf':
+            overlayContent = (
+                <Pdf
+                    style={style.pdf}
+                    source={source}
+                />
+            );
+            break;
+        case 'img':
+            overlayContent = (
+                <Image
+                    style={style.img}
+                    source={source}
+                />
+            );
+            break;
+    }
 
     return (
         <Overlay
@@ -33,13 +58,10 @@ const PdfOverlay = (props) => {
                 zoomStep={0.5}
                 initialZoom={1}
             >
-                <Pdf
-                    style={style.pdf}
-                    source={pdfSource}
-                />
+                {overlayContent}
             </ReactNativeZoomableView>
         </Overlay>
     );
 };
 
-export default PdfOverlay;
+export default ContentOverlay;

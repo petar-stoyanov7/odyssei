@@ -7,18 +7,20 @@ import {
     orange,
     blue,
     green,
+    red,
     black,
     lightGreen,
     darkGray,
 } from '../../StyleHelper';
 
 import style from './Main.style';
-import PdfOverlay from '../Overlay/PdfOverlay';
+import ContentOverlay from '../Overlay/ContentOverlay';
 
 const Main = (props) => {
     const [showOverlay, setShowOverlay] = useState(false);
-    const [pdfSource, setPdfSource] = useState('');
-    const [pdfTitle, setPdfTitle] = useState('');
+    const [contentSource, setContentSource] = useState('');
+    const [contentTitle, setContentTitle] = useState('');
+    const [contentType, setContentType] = useState(null);
 
     if (!props.document || !props.document.content) {
         return;
@@ -36,6 +38,8 @@ const Main = (props) => {
                 return green;
             case 'lightGreen':
                 return lightGreen;
+            case 'red':
+                return red;
             case 'orange':
             default:
                 return orange;
@@ -69,16 +73,18 @@ const Main = (props) => {
         }
     };
 
-    const hidePdfOverlay = () => {
+    const hideContentOverlay = () => {
         setShowOverlay(false);
-        setPdfSource('');
-        setPdfTitle('');
+        setContentSource('');
+        setContentTitle('');
+        setContentType(null);
     };
 
-    const showPdfOverlay = (title, source) => {
-        setPdfTitle(title);
+    const showContentOverlay = (title, source, type) => {
+        setContentTitle(title);
+        setContentType(type);
         setShowOverlay(true);
-        setPdfSource(source);
+        setContentSource(source);
     };
 
     const accessApp = (url) => {
@@ -101,7 +107,6 @@ const Main = (props) => {
         if (item.background) {
             bgColor = processColor(item.background);
         }
-        console.log('bg', bgColor);
         switch (item.type) {
             case 'link':
                 const linkStyle = bgColor
@@ -128,6 +133,10 @@ const Main = (props) => {
                 return (
                     <Text key={index} style={txt.default}>{item.text}</Text>
                 );
+            case 'list':
+                return (
+                    <Text key={index} style={txt.list}> - {item.text}</Text>
+                );
             case 'pdf':
                 const pdfStyle = bgColor
                     ? [style.button, {backgroundColor: bgColor}]
@@ -141,7 +150,25 @@ const Main = (props) => {
                         title={item.title}
                         buttonStyle={pdfStyle}
                         onPress={() => {
-                            showPdfOverlay(item.title, item.url);
+                            showContentOverlay(item.title, item.url, 'pdf');
+                        }}
+                        radius="3"
+                    />
+                );
+            case 'img':
+                const imageStyle = bgColor
+                    ? [style.button, {backgroundColor: bgColor}]
+                    : style.button;
+                return (
+                    <Button
+                        key={index}
+                        type="solid"
+                        size="md"
+                        color="danger"
+                        title={item.title}
+                        buttonStyle={imageStyle}
+                        onPress={() => {
+                            showContentOverlay(item.title, item.url, 'img');
                         }}
                         radius="3"
                     />
@@ -156,11 +183,12 @@ const Main = (props) => {
     return (
         <ScrollView style={style.scroller}>
             <View style={style.container}>
-                <PdfOverlay
-                    title={pdfTitle}
-                    source={pdfSource}
+                <ContentOverlay
+                    type={contentType}
+                    title={contentTitle}
+                    source={contentSource}
                     isVisible={showOverlay}
-                    onHide={hidePdfOverlay}
+                    onHide={hideContentOverlay}
                 />
                 <Text style={header.h2}>{document.title}</Text>
                 {parseText(document.description)}
