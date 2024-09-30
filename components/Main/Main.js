@@ -173,6 +173,20 @@ const Main = (props) => {
                         radius="3"
                     />
                 );
+            case 'container':
+                const containerStyle = item.subtype === 'flex'
+                    ? style.flexContainer
+                    : null;
+                return (
+                    <View
+                        key={index}
+                        style={containerStyle}
+                    >
+                        {item.items.map((subItem, i) => {
+                            return getProperElement(subItem, i);
+                        })}
+                    </View>
+                );
             default:
                 return '';
         }

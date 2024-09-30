@@ -13,15 +13,12 @@ const ContentOverlay = (props) => {
     }
     const source = {uri: `bundle-assets://data/${props.source}`};
     let overlayContent = '';
-
-    //todo: For some reason image is not working. Find out why.
-
     switch (props.type) {
         case 'pdf':
             overlayContent = (
                 <Pdf
                     style={style.pdf}
-                    source={source}
+                    source={{uri: `bundle-assets://data/${props.source}`}}
                 />
             );
             break;
@@ -29,7 +26,8 @@ const ContentOverlay = (props) => {
             overlayContent = (
                 <Image
                     style={style.img}
-                    source={source}
+                    resizeMode="contain"
+                    source={{uri: `asset:/data/${props.source}`}}
                 />
             );
             break;
